@@ -1,0 +1,121 @@
+@import "_setup";
+@import "_variables";
+@import "_placeholder_mixins.scss";
+@import "_flickity.scss";
+
+
+/*Main Styling*/
+
+body{
+	background: url(images/woodpattern3.jpg);
+	color: white;	
+}
+
+h1 {
+	font-family: sans-serif;
+	color: white;
+	text-align: center;
+	font-weight: normal;
+	margin-bottom: 10%;
+	font-size: 2em;
+}
+/*Header Styling*/
+.banner {
+	margin: 0 auto;
+	text-align: center;
+
+	li{
+		list-style-type: none;
+		display: inline-block;
+		height: 5px;
+		width: 100px;
+		margin: 0 5px;
+		background: $barberRed;
+		-webkit-transform:skewX(45deg);
+	}
+
+	li:nth-child(even) {
+		background: $barberBlue;
+	}
+}
+
+header {
+	width:100%;
+	background: rgba(0, 0, 0, .8);
+	margin: 0 auto;
+	height: 700px;
+	position: relative;
+
+	.container{
+		position: absolute;
+		top: 40%;
+		width: 100%;
+	}
+	h1 {
+		font-family: "Pinyon Script";
+		color: white;
+		text-align: center;
+		font-weight: normal;
+		margin-bottom: 10%;
+		font-size: 4em;
+	}
+}
+/*Header Buttons*/
+
+.buttons{
+	margin: 0 auto;
+	width: 75%;
+
+	
+	li{
+		@extend %buttonStyle;
+		float: left;
+		position: relative;
+		transition: background .7s;
+	
+		a{
+		text-align: center;
+		@extend %center;
+		}
+	}
+}
+
+.about:hover,
+.specials:hover {
+	background: $barberRed;
+}
+
+.unknown:hover {
+	background: $barberBlue;
+}
+
+
+/*Section One*/
+
+
+.info {
+	width: 100%;
+	margin: 0 auto;
+	height: 300px;
+	position: relative;
+
+
+	div{
+		margin: 0 auto;
+		float: left;
+		width: 80%;
+		display:none;	
+		@extend %center;
+
+	}
+}
+
+.button1{ 
+	transition: display 1s;
+}
+
+/*Gallery*/
+
+.gallery { position: relative; overflow: auto; }
+    .gallery li { list-style: none; }
+        .gallery ul li { float: left; }
